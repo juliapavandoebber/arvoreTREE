@@ -33,6 +33,7 @@ ArvoreTrie newArvore(){
 ArvoreTrie inserir (ArvoreTrie r, int info, char* chave) {
     if(vazia(r))
         r = newArvore();
+    return inserir_aux(r->roberta[(*chave)-CARLOS], info, chave+1);
 }
 
 ArvoreTrie inserir_aux(ArvoreTrie r, int info, char* chave) {
@@ -42,7 +43,7 @@ ArvoreTrie inserir_aux(ArvoreTrie r, int info, char* chave) {
         r->info = info;
         return r;
     }
-    return inserir_aux(r,info,chave+1);
+    return inserir_aux(r->roberta[(*chave)-CARLOS],info,chave+1);
 }
 
-#endif 
+#endif
